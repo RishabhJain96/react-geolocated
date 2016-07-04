@@ -70,9 +70,26 @@
     },
     isGeolocationAvailable, <span class="hljs-comment">// boolean flag indicating that the browser supports the Geolocation API</span>
     isGeolocationEnabled, <span class="hljs-comment">// boolean flag indicating that the user has allowed the use of the Geolocation API</span>
+    isGettingPosition, <span class="hljs-comment">// boolean flag indicating that the position data are being retrieved</span>
     positionError, <span class="hljs-comment">// object with the error returned from the Geolocation API call</span>
 }
-</code></pre></pre><p><span>The </span><code>coords</code><span> prop is equivalent to the </span><a href="https://developer.mozilla.org/en-US/docs/Web/API/Coordinates"><span>Coordinates</span></a><span> object and the </span><code>positionError</code><span> is equivalent to the </span><a href="https://developer.mozilla.org/en-US/docs/Web/API/PositionError"><span>PositionError</span></a><span>.</span></p><h2><span>Configuration</span></h2><p><span>The </span><code>geolocated</code><span> function takes optional configuration parameter:</span></p><pre><pre class="lowlight"><code class="hljs js">{
+</code></pre></pre><p><span>The </span><code>coords</code><span> prop is equivalent to the </span><a href="https://developer.mozilla.org/en-US/docs/Web/API/Coordinates"><span>Coordinates</span></a><span> object and the </span><code>positionError</code><span> is equivalent to the </span><a href="https://developer.mozilla.org/en-US/docs/Web/API/PositionError"><span>PositionError</span></a><span>.</span></p><h3><span>PropTypes</span></h3><p><span>Unfortunately, the </span><code>geolocated</code><span> HOC cannot add the prop types to the wrapped component directly, as the ESLint will not pick that up.  For this reason, prop types are exported as the </span><code>geoPropTypes</code><span> object.
+Using them is simple with </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign"><code>Object.assign</code></a><span>
+(or if you already depend on it, lodash </span><a href="https://lodash.com/docs#merge"><code>merge</code></a><span> function is useful as well),
+or, if your environment supports it, using the </span><a href="https://developer.mozilla.org/cs/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"><span>object spread syntax</span></a><span>:</span></p><pre><pre class="lowlight"><code class="hljs js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>;
+<span class="hljs-keyword">import</span> {geolocated, geoPropTypes} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-geolocated&#x27;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  <span class="hljs-comment">// Same as the basic example</span>
+}
+
+<span class="hljs-comment">// Using Object.assign</span>
+Demo.propTypes = <span class="hljs-built_in">Object</span>.assign({}, Demo.propTypes, geoPropTypes);
+<span class="hljs-comment">// Using ES6 object spread syntax</span>
+Demo.propTypes = {...Demo.propTypes, ...geoPropTypes};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> geolocated()(Demo);
+</code></pre></pre><h2><span>Configuration</span></h2><p><span>The </span><code>geolocated</code><span> function takes optional configuration parameter:</span></p><pre><pre class="lowlight"><code class="hljs js">{
     positionOptions: {
         enableHighAccuracy: <span class="hljs-literal">true</span>,
         maximumAge: <span class="hljs-number">0</span>,
@@ -83,5 +100,5 @@
         </section>
       </article>
     </div>
-  <script type="text/javascript" src="manifest.1cc4c139db84e5c9c0af.js"></script><script type="text/javascript" src="vendors.901e9a8b4d87bf95ede7.js"></script><script type="text/javascript" src="style.61218f0c26e8f5e5ef44.js"></script><script type="text/javascript" src="app.e9a27e23cd54384191d9.js"></script></body>
+  <script type="text/javascript" src="manifest.0c6c75bb7b0d063a4a65.js"></script><script type="text/javascript" src="vendors.901e9a8b4d87bf95ede7.js"></script><script type="text/javascript" src="style.61218f0c26e8f5e5ef44.js"></script><script type="text/javascript" src="app.6c96dbc9e1c2a6fa37e1.js"></script></body>
 </html>
