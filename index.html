@@ -30,7 +30,11 @@
 
         <h2>Documentation</h2>
         <section class="documentation">
-          <div><div><p><a href="http://travis-ci.org/no23reason/react-geolocated"><img src="https://secure.travis-ci.org/no23reason/react-geolocated.svg" alt="build status"/></a><span> </span><a href="https://www.bithound.io/github/no23reason/react-geolocated"><img src="https://www.bithound.io/github/no23reason/react-geolocated/badges/score.svg" alt="bitHound Score"/></a><span> </span><a href="https://david-dm.org/no23reason/react-geolocated"><img src="https://david-dm.org/no23reason/react-geolocated.svg" alt="Dependency Status"/></a></p><h1><span>react-geolocated - React.js Higher-Order Component for using </span><a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation"><span>Geolocation API</span></a></h1><h2><span>Basic Usage</span></h2><pre><pre class="lowlight"><code class="hljs js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>;
+          <div><div><p><a href="http://travis-ci.org/no23reason/react-geolocated"><img src="https://secure.travis-ci.org/no23reason/react-geolocated.svg" alt="build status"/></a><span>
+</span><a href="https://www.npmjs.com/package/react-geolocated"><img src="https://img.shields.io/npm/v/react-geolocated.svg" alt="npm version"/></a><span>
+</span><a href="https://www.bithound.io/github/no23reason/react-geolocated"><img src="https://www.bithound.io/github/no23reason/react-geolocated/badges/score.svg" alt="bitHound Score"/></a><span>
+</span><a href="https://david-dm.org/no23reason/react-geolocated"><img src="https://david-dm.org/no23reason/react-geolocated.svg" alt="Dependency Status"/></a></p><h1><span>react-geolocated - React.js Higher-Order Component for using </span><a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation"><span>Geolocation API</span></a></h1><h2><span>Demo</span></h2><p><span>Basic demo can be found at the </span><a href="https://no23reason.github.io/react-geolocated/"><span>demo page</span></a><span>.</span></p><h2><span>Basic Usage</span></h2><p><span>Install using </span><code>npm</code><span>:</span></p><pre><pre class="lowlight"><code class="hljs js">npm install react-geolocated --save
+</code></pre></pre><p><span>Then using in your application like this:</span></p><pre><pre class="lowlight"><code class="hljs js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>;
 <span class="hljs-keyword">import</span> {geolocated} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-geolocated&#x27;</span>;
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
@@ -70,7 +74,6 @@
     },
     isGeolocationAvailable, <span class="hljs-comment">// boolean flag indicating that the browser supports the Geolocation API</span>
     isGeolocationEnabled, <span class="hljs-comment">// boolean flag indicating that the user has allowed the use of the Geolocation API</span>
-    isGettingPosition, <span class="hljs-comment">// boolean flag indicating that the position data are being retrieved</span>
     positionError, <span class="hljs-comment">// object with the error returned from the Geolocation API call</span>
 }
 </code></pre></pre><p><span>The </span><code>coords</code><span> prop is equivalent to the </span><a href="https://developer.mozilla.org/en-US/docs/Web/API/Coordinates"><span>Coordinates</span></a><span> object and the </span><code>positionError</code><span> is equivalent to the </span><a href="https://developer.mozilla.org/en-US/docs/Web/API/PositionError"><span>PositionError</span></a><span>.</span></p><h3><span>PropTypes</span></h3><p><span>Unfortunately, the </span><code>geolocated</code><span> HOC cannot add the prop types to the wrapped component directly, as the ESLint will not pick that up.  For this reason, prop types are exported as the </span><code>geoPropTypes</code><span> object.
@@ -100,5 +103,5 @@ Demo.propTypes = {...Demo.propTypes, ...geoPropTypes};
         </section>
       </article>
     </div>
-  <script type="text/javascript" src="manifest.0c6c75bb7b0d063a4a65.js"></script><script type="text/javascript" src="vendors.901e9a8b4d87bf95ede7.js"></script><script type="text/javascript" src="style.61218f0c26e8f5e5ef44.js"></script><script type="text/javascript" src="app.6c96dbc9e1c2a6fa37e1.js"></script></body>
+  <script type="text/javascript" src="manifest.2fac6ddbfc5e26df29f2.js"></script><script type="text/javascript" src="vendors.b7c3df2b528430c6ac11.js"></script><script type="text/javascript" src="style.61218f0c26e8f5e5ef44.js"></script><script type="text/javascript" src="app.8162732862a7c74c4b60.js"></script></body>
 </html>
