@@ -61,6 +61,7 @@
   positionOptions: {
     enableHighAccuracy: <span class="hljs-literal">false</span>,
   },
+  userDecisionTimeout: <span class="hljs-number">5000</span>
 })(Demo);
 </code></pre></pre><h2><span>Props</span></h2><p><span>The props passed to the wrapped component are:</span></p><pre><pre class="lowlight"><code class="hljs js">{
     coords: {
@@ -98,10 +99,14 @@ Demo.propTypes = {...Demo.propTypes, ...geoPropTypes};
         maximumAge: <span class="hljs-number">0</span>,
         timeout: <span class="hljs-literal">Infinity</span>,
     },
+    userDecisionTimeout: <span class="hljs-literal">null</span>,
+    geolocationProvider: navigator.geolocation
 }
-</code></pre></pre><p><span>The </span><code>positionOptions</code><span> object corresponds to the </span><a href="https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions"><span>PositionOptions</span></a><span> of the Geolocation API. </span></p><h2><span>Acknowledgements</span></h2><p><span>This project uses the </span><a href="https://github.com/survivejs/react-component-boilerplate"><span>react-component-boilerplate</span></a><span>.</span></p><h2><span>License</span></h2><p><em><span>react-geolocated</span></em><span> is available under MIT. See LICENSE for more details.</span></p></div></div>
+</code></pre></pre><p><span>The </span><code>positionOptions</code><span> object corresponds to the </span><a href="https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions"><span>PositionOptions</span></a><span> of the Geolocation API.</span></p><p><span>If set, the </span><code>userDecisionTimeout</code><span> determines how much time (in miliseconds) we give the user to make the decision whether to allow to share their location or not.
+In Firefox, if the user declines to use their location, the Geolocation API call does not end with an error.
+Therefore we want to fallback to the error state if the user declines and the API does not tell us.</span></p><p><span>The </span><code>geolocationProvider</code><span> allows to specify alternative source of the geolocation API. This was added mainly for testing purposes, however feel free to use it if need be.</span></p><h2><span>Acknowledgements</span></h2><p><span>This project uses the </span><a href="https://github.com/survivejs/react-component-boilerplate"><span>react-component-boilerplate</span></a><span>.</span></p><h2><span>License</span></h2><p><em><span>react-geolocated</span></em><span> is available under MIT. See LICENSE for more details.</span></p></div></div>
         </section>
       </article>
     </div>
-  <script type="text/javascript" src="manifest.2fac6ddbfc5e26df29f2.js"></script><script type="text/javascript" src="vendors.b7c3df2b528430c6ac11.js"></script><script type="text/javascript" src="style.61218f0c26e8f5e5ef44.js"></script><script type="text/javascript" src="app.8162732862a7c74c4b60.js"></script></body>
+  <script type="text/javascript" src="manifest.edab74745cfae372acc6.js"></script><script type="text/javascript" src="vendors.b7c3df2b528430c6ac11.js"></script><script type="text/javascript" src="style.61218f0c26e8f5e5ef44.js"></script><script type="text/javascript" src="app.56be1cbae1a5c4cfe1b6.js"></script></body>
 </html>
